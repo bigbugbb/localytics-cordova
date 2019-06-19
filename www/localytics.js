@@ -733,4 +733,14 @@ Localytics.prototype.getLibraryVersion = function (successCallback) {
 	cordova.exec(successCallback, null, "LocalyticsPlugin", "getLibraryVersion", []);
 }
 
+// Installation constructor that binds Localytics to window
+Localytics.install = function() {
+	if (!window.plugins) {
+		window.plugins = {};
+	}
+	window.plugins.localytics = new Localytics();
+	return window.plugins.localytics;
+};
+cordova.addConstructor(Localytics.install);
+
 module.exports = new Localytics();
