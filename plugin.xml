@@ -44,27 +44,27 @@
             </feature>
         </config-file>
 
-        <!-- <config-file target="AndroidManifest.xml" parent="/*">
+        <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.WAKE_LOCK" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-        </config-file> -->
+        </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <meta-data
+        <config-file target="res/AndroidManifest.xml" parent="/manifest/application">
+            <!-- <meta-data
                 android:name="LOCALYTICS_APP_KEY"
-                android:value="8887da9410e5d9cd3fcc964-c433c32c-935a-11e9-6d10-007c928ca240" />
+                android:value="8887da9410e5d9cd3fcc964-c433c32c-935a-11e9-6d10-007c928ca240" /> -->
 
-            <!-- <receiver
+            <receiver
                 android:name="com.localytics.android.ReferralReceiver"
                 android:exported="true">
                 <intent-filter>
                     <action android:name="com.android.vending.INSTALL_REFERRER" />
                 </intent-filter>
-            </receiver> -->
+            </receiver>
 
-            <!-- <receiver android:name="com.localytics.android.LocationUpdateReceiver"/> -->
+            <receiver android:name="com.localytics.android.LocationUpdateReceiver"/>
         </config-file>
 
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
