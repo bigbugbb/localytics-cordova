@@ -51,7 +51,7 @@
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file> -->
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <config-file target="res/AndroidManifest.xml" parent="/manifest/application">
             <meta-data
                 android:name="LOCALYTICS_APP_KEY"
                 android:value="1ee5cfa63c36b62e9c4c3aa-a230cd2e-3fae-11e9-c8eb-007c928ca240" />
