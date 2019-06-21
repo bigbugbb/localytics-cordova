@@ -51,8 +51,8 @@
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <!-- <meta-data android:name="LOCALYTICS_APP_KEY" android:value="8887da9410e5d9cd3fcc964-c433c32c-935a-11e9-6d10-007c928ca240" /> -->
+        <config-file target="AndroidManifest.xml" parent="./application">
+            <meta-data android:name="LOCALYTICS_APP_KEY" android:value="8887da9410e5d9cd3fcc964-c433c32c-935a-11e9-6d10-007c928ca240" />
 
             <receiver
                 android:name="com.localytics.android.ReferralReceiver"
