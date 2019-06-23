@@ -86,7 +86,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
             Localytics.autoIntegrate(cordova.getActivity().getApplication());
             Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
             String appKey = Localytics.getAppKey();
-            Log.i(LOG_TAG, "appKey = " + appKey);
+            Log.i(LOG_TAG, "appKey1 = " + appKey);
             callbackContext.success();
             return true;
         } else if (action.equals("upload")) {
