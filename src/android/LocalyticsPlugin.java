@@ -83,15 +83,19 @@ public class LocalyticsPlugin extends CordovaPlugin {
             callbackContext.success();
             return true;
         } else if (action.equals("autoIntegrate")) {
-            Log.i(LOG_TAG, "autoIntegrate");
-            Localytics.autoIntegrate(cordova.getActivity().getApplication());
-            Log.i(LOG_TAG, "setInAppMessageDisplayActivity");
-            Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
-            Log.i(LOG_TAG, "success");
-            // callbackContext.success();
-            // Send a positive result to the callbackContext
-            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
-            Log.i(LOG_TAG, "done");
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    Log.i(LOG_TAG, "autoIntegrate");
+                    Localytics.autoIntegrate(cordova.getActivity().getApplication());
+                    Log.i(LOG_TAG, "setInAppMessageDisplayActivity");
+                    Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
+                    Log.i(LOG_TAG, "success");
+                    // callbackContext.success();
+                    // Send a positive result to the callbackContext
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
+                    Log.i(LOG_TAG, "done");
+                }
+            });
             return true;
         } else if (action.equals("upload")) {
             Localytics.upload();
