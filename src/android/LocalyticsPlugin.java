@@ -93,7 +93,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
                     // callbackContext.success();
                     // Send a positive result to the callbackContext
                     callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
-                    Log.i(LOG_TAG, "done");
+                    Log.i(LOG_TAG, "sendPluginResult done");
                 }
             });
             return true;
