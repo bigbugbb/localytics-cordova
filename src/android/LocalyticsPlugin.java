@@ -88,8 +88,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
             Log.i(LOG_TAG, "setInAppMessageDisplayActivity");
             Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
             Log.i(LOG_TAG, "success");
-            callbackContext.success();
-
+            // callbackContext.success();
             // Send a positive result to the callbackContext
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
             Log.i(LOG_TAG, "done");
