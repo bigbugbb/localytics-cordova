@@ -83,6 +83,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
             callbackContext.success();
             return true;
         } else if (action.equals("autoIntegrate")) {
+            Localytics.setLoggingEnabled(true);
             Localytics.autoIntegrate(cordova.getActivity().getApplication());
             Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
             String appKey = Localytics.getAppKey();
