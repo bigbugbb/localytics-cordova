@@ -83,9 +83,13 @@ public class LocalyticsPlugin extends CordovaPlugin {
             callbackContext.success();
             return true;
         } else if (action.equals("autoIntegrate")) {
+            Log.i(LOG_TAG, "autoIntegrate");
             Localytics.autoIntegrate(cordova.getActivity().getApplication());
+            Log.i(LOG_TAG, "setInAppMessageDisplayActivity");
             Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
+            Log.i(LOG_TAG, "success");
             callbackContext.success();
+            Log.i(LOG_TAG, "done");
             return true;
         } else if (action.equals("upload")) {
             Localytics.upload();
