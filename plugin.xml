@@ -52,8 +52,6 @@
         </config-file>
 
         <custom-config-file target="AndroidManifest.xml" parent="./application">
-            <meta-data android:name="LOCALYTICS_APP_KEY" android:value="8887da9410e5d9cd3fcc964-c433c32c-935a-11e9-6d10-007c928ca240" />
-
             <receiver
                 android:name="com.localytics.android.ReferralReceiver"
                 android:exported="true">
@@ -66,6 +64,8 @@
         </custom-config-file>
 
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
+
+        <resource-file src="res/values/localytics.xml" target="/app/src/main/res/values/localytics.xml" />
 
         <source-file src="src/android/LocalyticsPlugin.java" target-dir="src/com/localytics/phonegap/" />
         <source-file src="src/android/CDAnalyticsListener.java" target-dir="src/com/localytics/phonegap/" />
