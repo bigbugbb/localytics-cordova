@@ -65,7 +65,7 @@
 
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
 
-        <!-- <resource-file src="res/values/localytics.xml" target="/app/src/main/res/values/localytics.xml" /> -->
+        <resource-file src="www/res/values/localytics.xml" target="/app/src/main/res/values/localytics.xml" />
 
         <source-file src="src/android/LocalyticsPlugin.java" target-dir="src/com/localytics/phonegap/" />
         <source-file src="src/android/CDAnalyticsListener.java" target-dir="src/com/localytics/phonegap/" />
