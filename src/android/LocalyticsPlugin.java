@@ -85,8 +85,6 @@ public class LocalyticsPlugin extends CordovaPlugin {
         } else if (action.equals("autoIntegrate")) {
             Localytics.autoIntegrate(cordova.getActivity().getApplication());
             Localytics.setInAppMessageDisplayActivity(cordova.getActivity());
-            String appKey = Localytics.getAppKey();
-            Log.i(LOG_TAG, "appKey1 = " + appKey);
             callbackContext.success();
             return true;
         } else if (action.equals("upload")) {
@@ -1119,6 +1117,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
             boolean enabled = args.getBoolean(0);
             Localytics.setLoggingEnabled(enabled);
             callbackContext.success();
+            Log.i(LOG_TAG, "setLoggingEnabled");
             return true;
         } else if (action.equals("enableLiveDeviceLogging")) {
             Localytics.enableLiveDeviceLogging();
