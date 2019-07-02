@@ -14,7 +14,7 @@
     <bool name="ll_push_tracking_activity_enabled">true</bool>
 
     <!-- Specify the GCM Sender ID which will be used to register for push tokens -->
-    <string name="ll_gcm_sender_id" translatable="false">MY_GCM_SENDER_ID</string>
+    <string name="ll_gcm_sender_id" translatable="false">310197071350</string>
 
     <!-- Toggle the Localytics FirebaseInstanceIdService and FirebaseMessagingService, which handle
     incoming requests from FCM. If this value is set to true, then the app must specify the
