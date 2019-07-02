@@ -1081,7 +1081,7 @@ public class LocalyticsPlugin extends CordovaPlugin {
                   Localytics.triggerRegions(toCircularRegions(regions), toEvent(event), location);
                 } else {
                     Log.i(LOG_TAG, "Call to triggerRegions couldn't find latitude and longitude values. Defaulting to null.");
-                  Localytics.triggerRegions(toCircularRegions(regions), toEvent(event), null);
+                    Localytics.triggerRegions(toCircularRegions(regions), toEvent(event), null);
                 }
                 callbackContext.success();
             } else {
@@ -1117,7 +1117,6 @@ public class LocalyticsPlugin extends CordovaPlugin {
             boolean enabled = args.getBoolean(0);
             Localytics.setLoggingEnabled(enabled);
             callbackContext.success();
-            Log.i(LOG_TAG, "setLoggingEnabled");
             return true;
         } else if (action.equals("enableLiveDeviceLogging")) {
             Localytics.enableLiveDeviceLogging();
