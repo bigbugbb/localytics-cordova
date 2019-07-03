@@ -21,8 +21,7 @@
             </feature>
         </config-file>
 
-        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
-            <key>LocalyticsAppKey</key>
+        <config-file target="*-Info.plist" parent="LocalyticsAppKey">
             <string>e2866087156d995c9f9b1d9-bdbb1158-8942-11e9-f584-007c928ca240</string>
         </config-file>
 
